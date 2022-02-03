@@ -9,8 +9,8 @@ function isEmpty(obj) {
 
 let schedule = {};
 
-alert( isEmpty(schedule) ); // true
+ isEmpty(schedule) ; // true
 
 schedule["8:30"] = "подъём";
 
-alert( isEmpty(schedule) ); // false
+ isEmpty(schedule); // false
