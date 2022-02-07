@@ -4,5 +4,4 @@ function showSalary(users, age) {
 };
 
 
-let result = showSalary(users, age);
 
