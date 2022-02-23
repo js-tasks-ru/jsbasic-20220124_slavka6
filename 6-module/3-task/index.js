@@ -23,7 +23,7 @@ export default class Carousel {
     `);
     for (let slide of this.slides) {
       this.elem.querySelector('.carousel__inner').append(createElement(`
-  <div class="carousel__slide" data-id="penang-shrimp">
+  <div class="carousel__slide" data-id="${slide.id}">
   <img src="/assets/images/carousel/${slide.image}" class="carousel__img" alt="slide">
   <div class="carousel__caption">
     <span class="carousel__price">€${slide.price.toFixed(2)}</span>
@@ -40,7 +40,7 @@ export default class Carousel {
     button.addEventListener('click', () => {
       
       let customEvent = new CustomEvent('product-add', { bubbles: true, detail: event.target.closest('.carousel__slide').dataset.id });
-      //console.log(event.target.closest('.carousel__slide').dataset.id);
+      console.log(event.target.closest('.carousel__slide').dataset.id);
       this.elem.dispatchEvent(customEvent);
     });
     }
